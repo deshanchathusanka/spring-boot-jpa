@@ -26,6 +26,12 @@ public class EmployeeController
         return employeeService.get();
     }
 
+    @GetMapping( "/employee/{id}" ) // id is a path variable
+    public Employee get( @PathVariable Integer id )
+    {
+        return employeeService.get( id );
+    }
+
     @PostMapping( "/employee" )
     public Employee save( @RequestBody Employee employee )
     {

@@ -32,7 +32,8 @@ public class EmployeeDAOImpl implements EmployeeDAO
     @Override
     public Employee get( int id )
     {
-        return null;
+        Session session = entityManager.unwrap( Session.class );
+        return session.get( Employee.class, id );
     }
 
     @Override
