@@ -38,4 +38,11 @@ public class EmployeeController
         employeeService.save( employee );
         return employee;
     }
+
+    @DeleteMapping( "/employee/{id}" ) // id is a path variable
+    public String delete( @PathVariable Integer id )
+    {
+        employeeService.delete( id );
+        return "Employee object has been removed with id" + id;
+    }
 }

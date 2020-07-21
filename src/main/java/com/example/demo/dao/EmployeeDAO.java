@@ -31,7 +31,7 @@ public interface EmployeeDAO
 
     /**
      * delete employee
-     * @param employee
+     * @param id
      */
-    void delete( Employee employee );
+    void delete( int id );
 }
