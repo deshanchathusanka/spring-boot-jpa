@@ -39,6 +39,13 @@ public class EmployeeController
         return employee;
     }
 
+    @PutMapping( "/employee" )
+    public Employee update( @RequestBody Employee employee )
+    {
+        employeeService.save( employee );
+        return employee;
+    }
+
     @DeleteMapping( "/employee/{id}" ) // id is a path variable
     public String delete( @PathVariable Integer id )
     {
